@@ -6,7 +6,7 @@ protocol Talk {
 
 struct Person: Talk {
     func talk() -> String {
-        return "Person is talking!"
+        return "Person is talking"
     }
 }
 let person1 = Person()
