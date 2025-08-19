@@ -91,17 +91,20 @@ print(tesla.model)
 print("---------")
 print(modelY.manufacturer)
 print(modelY.model)
-
+var count: Int = 0
 class myClass {
     var string: String
     init(){
         self.string = "initializer"
+        count += 1
     }
     func doSomething() -> String {
-        "Doing something"
+        count += 1
+        return "Doing something....."
     }
     deinit {
         string = "deinitializer"
+        count -= 1
     }
 }
 
@@ -109,7 +112,23 @@ let myClosure = {
     let myClass = myClass()
     let doSomething = myClass.doSomething()
     print(doSomething)
+    print("count in closure \(count)")
 }
+
+if count == 0
+{
+    print("myClosure not called")
+    print("count : \(count)")
+}
+print("myClosure called")
 myClosure()
 
+print("count after closure \(count)")
+myClosure()
+myClosure()
+myClosure()
+myClosure()
+myClosure()
+myClosure()
+print("closure called \(count) times")
 
