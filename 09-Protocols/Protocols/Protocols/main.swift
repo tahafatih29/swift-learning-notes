@@ -132,5 +132,5 @@ func increaseSpeedIfAir(obj: Any){
 increaseSpeedIfVehicle(obj: car)
 print(car.speed)  // speed : 50 not 150 because struct
 increaseSpeedIfAir(obj: plane)
-print(plane.speed) // speed : 500 because class 
+print(plane.speed) // speed : 500 because class
 
